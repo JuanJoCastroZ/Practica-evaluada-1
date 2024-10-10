@@ -27,7 +27,7 @@ public class Ejercicio_Pactico1 {
             Salario = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el salario del " + i + "° empleado: ")); //Solicita el salario del empleado actual
             controladorSalarioSEM = Salario * 0.0508; //Tomará el 5.09% del salario del empleado actual
             controladorSalarioIVM = Salario * 0.0925; //Tomará el 9.25% del salario del empleado actual
-            totalDebido = controladorSalarioIVM + controladorSalarioSEM; //Suma al total por pagar lo almacenado actualmente en controladorSalarioSEM y controladorSalarioIVM
+            totalDebido = totalDebido + (controladorSalarioIVM + controladorSalarioSEM); //Suma al total por pagar lo almacenado actualmente en controladorSalarioSEM y controladorSalarioIVM
         }
         JOptionPane.showMessageDialog(null, "La empresa debera abonar a la CCSS el monto de: ₡" + totalDebido + " por concepto de SEM e IVM."); //Muestra el total sumado al usuario
     }
